@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js" charset ="utf-8"></script>
+</head>
+<body>
+<div id="app">
+  <p>{{ message }}</p>
+  <div v-html = "title">
+    
+  </div>
+  <div v-if = "seen">
+      现在你看到我了
+      <a v-bind:href="url">百度{{url}}</a>
+  </div>
+  {{content}}
+  <input v-model = "content">
+
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!',
+    title : '<h1> 我是谁</h1>',
+    seen : true,
+    url : "https://www.baidu.com",
+    content : "表单数据双向绑定"
+  }
+})
+</script>
+</body>
+</html>
